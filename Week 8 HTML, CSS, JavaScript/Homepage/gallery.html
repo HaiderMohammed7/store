@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery </title>
+    </head>
+    <style>
+        body {
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 3em;
+    border-bottom: 2px solid pink;
+    border-right: 2px solid pink;
+    width: 400px;
+    text-align: center;
+    margin-top: 10px;
+    box-shadow: 5px 5px 10px #888;
+}
+
+h1:hover {
+    color: gold;
+}
+
+img {
+    width: 450px;
+    height: 300px;
+    margin: 10px;
+    transition: all 1s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+
+    </style> 
+</head>
+<body>
+    <h1>Life in the wild</h1>
+    <div class="container">
+        <img src="images/horse-herd-fog-nature-52500.jpeg" alt="horse">
+        <img src="images/elephant-cub-tsavo-kenya-66898.jpeg" alt="elephant">
+        <img src="images/pexels-photo-213399.jpeg" alt="fish">
+        <img src="images/ibis-bird-red-animals-158471.jpeg" alt="bird">
+        <img src="images/pexels-photo-133459.jpeg" alt="animal">
+        <img src="images/ape-berber-monkeys-mammal-affchen-50988.jpeg" alt="monkey">
+    </div>
+
+</body>
+
+</html>

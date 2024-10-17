@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+             document.addEventListener('DOMContentLoaded', function()
+             {
+                 let corrects = document.querySelectorAll('.correct');
+                  for (let i = 0; i < corrects.length; i++) {
+                    corrects[i].addEventListener('click', function() {
+                      corrects[i].style.backgroundColor = 'Green';
+                      corrects[i].parentElement.querySelector('.MCH').innerHTML = 'Correct!';
+    });
+}
+
+
+                     let incorrects = document.querySelectorAll(".incorrect");
+                       for (let i = 0; i < incorrects.length; i++) {
+                       incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'Red';
+                        incorrects[i].parentElement.querySelector('.MCH').innerHTML = 'Incorrect';
+        });
+}
+
+
+                 document.querySelector('#check').addEventListener('click', function() {
+                     let input = document.querySelector('input');
+                       if (input.value === '18') {
+                         input.style.backgroundColor = 'green';
+                         input.parentElement.querySelector('.FRE').innerHTML = 'Correct!';
+    } else {
+        input.style.backgroundColor = 'red';
+        input.parentElement.querySelector('.FRE').innerHTML = 'Incorrect';
+    }
+      });
+});
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Multiple Choice</h2>
+                <hr>
+                 <h3>What is the capital of Iraq?</h3>
+                 <button class ="incorrect">Riyadh</button>
+                 <button class ="incorrect">Abu Dhabi</button>
+                 <button class ="incorrect">Cairo</button>
+                 <button class ="incorrect">Kuwait</button>
+                 <button class ="correct">Baghdad</button>
+                 <P class = "MCH"></P>
+            </div>
+
+            <div class="section">
+                <h2>Free Response</h2>
+                <hr>
+                 <h3>How many governorates are there in Iraq?</h3>
+                 <input type = "text"></input>
+                 <button id ="check">Check your Answer</button>
+                 <p class ="FRE"></p>
+            </div>
+        </div>
+    </body>
+</html>
